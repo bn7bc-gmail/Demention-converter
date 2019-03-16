@@ -17,13 +17,13 @@ namespace Demention_converter
         {
             InitializeComponent();
             _conv = new Converter();
-            _conv.OnConverterStatus += new Converter.ConverterStatusHandler(_st);
+            _conv.OnConverterStatus += new Converter.ConverterStatusHandler(St);
         }
         /// <summary>
         /// 
         /// </summary>
         
-        private void _st(object sender, ConverterEventArgs e)
+        private void St(object sender, ConverterEventArgs e)
         {
             CResults res = e.Result;
             W1.Text = res.W177.ToString();
