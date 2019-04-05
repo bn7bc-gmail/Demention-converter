@@ -30,6 +30,12 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.m133 = new System.Windows.Forms.RadioButton();
+            this.m177 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.d133 = new System.Windows.Forms.RadioButton();
+            this.dd177 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Button1 = new System.Windows.Forms.Button();
@@ -45,6 +51,8 @@
             this.D2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.TableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +68,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.Button1);
@@ -71,17 +81,83 @@
             this.tabPage1.Text = "Diagonal";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.m133);
+            this.groupBox2.Controls.Add(this.m177);
+            this.groupBox2.Location = new System.Drawing.Point(318, 39);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(121, 100);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Media Aspec ratio";
+            // 
+            // m133
+            // 
+            this.m133.AutoSize = true;
+            this.m133.Location = new System.Drawing.Point(26, 42);
+            this.m133.Name = "m133";
+            this.m133.Size = new System.Drawing.Size(40, 17);
+            this.m133.TabIndex = 5;
+            this.m133.Text = "4:3";
+            this.m133.UseVisualStyleBackColor = true;
+            this.m133.CheckedChanged += new System.EventHandler(this.Rbtn_Checkchange);
+            // 
+            // m177
+            // 
+            this.m177.AutoSize = true;
+            this.m177.Location = new System.Drawing.Point(26, 19);
+            this.m177.Name = "m177";
+            this.m177.Size = new System.Drawing.Size(46, 17);
+            this.m177.TabIndex = 4;
+            this.m177.Text = "16:9";
+            this.m177.UseVisualStyleBackColor = true;
+            this.m177.CheckedChanged += new System.EventHandler(this.Rbtn_Checkchange);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.d133);
+            this.groupBox1.Controls.Add(this.dd177);
+            this.groupBox1.Location = new System.Drawing.Point(191, 39);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(121, 100);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Screen aspect ratio";
+            // 
+            // d133
+            // 
+            this.d133.AutoSize = true;
+            this.d133.Location = new System.Drawing.Point(15, 42);
+            this.d133.Name = "d133";
+            this.d133.Size = new System.Drawing.Size(40, 17);
+            this.d133.TabIndex = 3;
+            this.d133.Text = "4:3";
+            this.d133.UseVisualStyleBackColor = true;
+            this.d133.CheckedChanged += new System.EventHandler(this.Rbtn_Checkchange);
+            // 
+            // dd177
+            // 
+            this.dd177.AutoSize = true;
+            this.dd177.Location = new System.Drawing.Point(15, 19);
+            this.dd177.Name = "dd177";
+            this.dd177.Size = new System.Drawing.Size(46, 17);
+            this.dd177.TabIndex = 2;
+            this.dd177.Text = "16:9";
+            this.dd177.UseVisualStyleBackColor = true;
+            this.dd177.CheckedChanged += new System.EventHandler(this.Rbtn_Checkchange);
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 10);
+            this.textBox1.Location = new System.Drawing.Point(266, 13);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.Size = new System.Drawing.Size(141, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 13);
+            this.label1.Location = new System.Drawing.Point(203, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
@@ -89,11 +165,11 @@
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(26, 36);
+            this.Button1.Location = new System.Drawing.Point(249, 156);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(158, 28);
-            this.Button1.TabIndex = 0;
-            this.Button1.Text = "button1";
+            this.Button1.TabIndex = 4;
+            this.Button1.Text = "&Convert";
             this.Button1.UseVisualStyleBackColor = true;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -226,6 +302,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.TableLayoutPanel1.ResumeLayout(false);
             this.TableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -249,6 +329,12 @@
         private System.Windows.Forms.Label W2;
         private System.Windows.Forms.Label H2;
         private System.Windows.Forms.Label D2;
-    }
+        private System.Windows.Forms.RadioButton dd177;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton d133;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton m133;
+        private System.Windows.Forms.RadioButton m177;
+        }
 }
 
